@@ -33,7 +33,6 @@ class App extends Component {
     dispatch(fetchAppsIfNeeded());
 
     this.backListener = history.listen(location => {
-      console.log(location);
       if (location.action === "POP") {
         // Do your stuff
         const queryParam = location ? parseQuery(location.search) : {};
@@ -41,7 +40,6 @@ class App extends Component {
           domain: queryParam.domain ? [queryParam.domain] : [0],
           viewMode: queryParam.viewMode && queryParam.viewMode === 'true'
         });
-        console.log('pop History');
       }
     });
   }
@@ -87,7 +85,6 @@ class App extends Component {
   render() {
     const { isFetching, news, trend, sources, viewNews, history } = this.props;
     const queryParam = history ? parseQuery(history.location.search) : {};
-    console.log(typeof queryParam['viewMode']);
     return (
        <div>
          <Menu mode="horizontal" selectedKeys={this.state.domain} onClick={e => this.handleDomainChange(e)} selectable style={{ padding: '0 40px', position: 'fixed', top: 0, zIndex: 100 , width: '100%'}}>

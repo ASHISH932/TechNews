@@ -11,7 +11,6 @@ import {Route, StaticRouter} from "react-router-dom";
 
 
 const renderMiddleware = () => (req, res) => {
-  console.log(req.query);
   let html = req.html;
   let sources = [];
   let trend = [];
