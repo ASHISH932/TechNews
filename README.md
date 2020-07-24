@@ -1,3 +1,9 @@
+# Tech News
+
+Tech News is a Tech News Aggregator Platform built on React.
+
+<img src='https://i.imgur.com/jxWSE4x.png' title='Tech News' width='' alt='Tech News' />
+
 This project was bootstrapped with [Create React SSR App](https://github.com/trustworktech/create-react-ssr-app).
 
 ## Available Scripts
